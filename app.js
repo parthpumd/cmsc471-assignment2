@@ -54,16 +54,16 @@ function renderWhite(){
 }
 function renderBlack(){
  const rows=audited?[...enrollmentData].sort((a,b)=>a.gap-b.gap):chosen;
- $('#black-heading').textContent=audited?'The omitted economies change the story.':'Primary education has reached gender equality.';
- $('#black-deck').textContent=audited?'All eligible observations, with the same scale and same source. Enrollment gaps run in both directions.':'Girls match or outperform boys across leading education markets. The access gap is behind us.';
+ $('#black-heading').textContent=audited?'The gaps are clearer with all 80 economies.':'Primary education has reached gender equality.';
+ $('#black-deck').textContent=audited?'This view includes every complete pair in our sample. Some economies have lower female enrollment, while others have lower male enrollment.':'Girls match or outperform boys across leading education markets. The access gap is behind us.';
  const n=enrollmentData.filter(r=>r.female>=r.male).length;
  $('#black-number').textContent=audited?`${n}/80`:'100%';
  $('#black-number-label').textContent=audited?'eligible economies have female enrollment at or above male enrollment; this is not a measure of equality':'of featured economies have female enrollment at or above male enrollment';
  $('#black-note').textContent=audited?'World Bank · all 80 comparable economies · 2017 · not a worldwide population estimate':'World Bank · adjusted net primary enrollment · selected economies · 2017';
- $('#audit').textContent=audited?'Return to the selective frame':'Reveal what this frame leaves out';
+ $('#audit').textContent=audited?'Return to the selected eight':'Show the missing economies';
  $('#audit').setAttribute('aria-pressed',String(audited));
  $('#audit-box').hidden=!audited;
- $('#audit-box').textContent=`Selection recipe: retain economies where female enrollment ≥ male enrollment, rank by female enrollment, take the top 8. This hides ${enrollmentData.length-chosen.length} eligible economies. The full sample’s female–male gap ranges from ${signed(Math.min(...enrollmentData.map(r=>r.gap)))} to ${signed(Math.max(...enrollmentData.map(r=>r.gap)))} percentage points. Neither a favorable subset nor a near-zero mean establishes equal access everywhere.`;
+ $('#audit-box').textContent=`How we picked the eight: keep economies where female enrollment ≥ male enrollment, sort by female enrollment, then take the top 8. This hides ${enrollmentData.length-chosen.length} eligible economies. The full sample’s female–male gap ranges from ${signed(Math.min(...enrollmentData.map(r=>r.gap)))} to ${signed(Math.max(...enrollmentData.map(r=>r.gap)))} percentage points. These selected results do not show that access is equal everywhere.`;
  draw('#black-chart',rows,true);
 }
 [...new Set(enrollmentData.map(r=>r.region))].sort().forEach(region=>{const option=document.createElement('option');option.value=region;option.textContent=region;$('#region').append(option)});
