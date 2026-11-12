@@ -1,0 +1,642 @@
+[
+  {
+    "name": "Pakistan",
+    "code": "PAK",
+    "region": "South Asia",
+    "female": 60.35115,
+    "male": 70.26991,
+    "gap": -9.918759999999999
+  },
+  {
+    "name": "Cameroon",
+    "code": "CMR",
+    "region": "Sub-Saharan Africa",
+    "female": 88.71914,
+    "male": 96.96492,
+    "gap": -8.24578000000001
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "code": "CIV",
+    "region": "Sub-Saharan Africa",
+    "female": 84.7071,
+    "male": 92.48502,
+    "gap": -7.777920000000009
+  },
+  {
+    "name": "Mali",
+    "code": "MLI",
+    "region": "Sub-Saharan Africa",
+    "female": 63.5393,
+    "male": 71.01144,
+    "gap": -7.472139999999996
+  },
+  {
+    "name": "Togo",
+    "code": "TGO",
+    "region": "Sub-Saharan Africa",
+    "female": 89.66983,
+    "male": 95.54365,
+    "gap": -5.873819999999995
+  },
+  {
+    "name": "Eritrea",
+    "code": "ERI",
+    "region": "Sub-Saharan Africa",
+    "female": 49.86818,
+    "male": 54.54563,
+    "gap": -4.67745
+  },
+  {
+    "name": "Indonesia",
+    "code": "IDN",
+    "region": "East Asia & Pacific",
+    "female": 92.76452,
+    "male": 96.99213,
+    "gap": -4.2276099999999985
+  },
+  {
+    "name": "Mozambique",
+    "code": "MOZ",
+    "region": "Sub-Saharan Africa",
+    "female": 88.22894,
+    "male": 91.51815,
+    "gap": -3.2892100000000113
+  },
+  {
+    "name": "Burkina Faso",
+    "code": "BFA",
+    "region": "Sub-Saharan Africa",
+    "female": 76.07373,
+    "male": 77.90443,
+    "gap": -1.8307000000000073
+  },
+  {
+    "name": "Cabo Verde",
+    "code": "CPV",
+    "region": "Sub-Saharan Africa",
+    "female": 92.1013,
+    "male": 93.85572,
+    "gap": -1.7544200000000103
+  },
+  {
+    "name": "Barbados",
+    "code": "BRB",
+    "region": "Latin America & Caribbean",
+    "female": 95.78701,
+    "male": 97.29118,
+    "gap": -1.504170000000002
+  },
+  {
+    "name": "Lao PDR",
+    "code": "LAO",
+    "region": "East Asia & Pacific",
+    "female": 91.72209,
+    "male": 93.22323,
+    "gap": -1.5011400000000066
+  },
+  {
+    "name": "Sudan",
+    "code": "SDN",
+    "region": "Sub-Saharan Africa",
+    "female": 61.01514,
+    "male": 62.36444,
+    "gap": -1.3492999999999995
+  },
+  {
+    "name": "Comoros",
+    "code": "COM",
+    "region": "Sub-Saharan Africa",
+    "female": 83.59432,
+    "male": 84.75484,
+    "gap": -1.1605200000000053
+  },
+  {
+    "name": "Jordan",
+    "code": "JOR",
+    "region": "Middle East & North Africa",
+    "female": 79.66653,
+    "male": 80.74524,
+    "gap": -1.078710000000001
+  },
+  {
+    "name": "Portugal",
+    "code": "PRT",
+    "region": "Europe & Central Asia",
+    "female": 97.35343,
+    "male": 98.05486,
+    "gap": -0.701430000000002
+  },
+  {
+    "name": "Turkey",
+    "code": "TUR",
+    "region": "Europe & Central Asia",
+    "female": 94.52416,
+    "male": 95.21518,
+    "gap": -0.6910200000000088
+  },
+  {
+    "name": "Panama",
+    "code": "PAN",
+    "region": "Latin America & Caribbean",
+    "female": 86.46573,
+    "male": 87.08438,
+    "gap": -0.6186500000000024
+  },
+  {
+    "name": "Cambodia",
+    "code": "KHM",
+    "region": "East Asia & Pacific",
+    "female": 90.58247,
+    "male": 91.01428,
+    "gap": -0.4318099999999987
+  },
+  {
+    "name": "Qatar",
+    "code": "QAT",
+    "region": "Middle East & North Africa",
+    "female": 97.5693,
+    "male": 97.97295,
+    "gap": -0.40364999999999895
+  },
+  {
+    "name": "Bolivia",
+    "code": "BOL",
+    "region": "Latin America & Caribbean",
+    "female": 91.29061,
+    "male": 91.6749,
+    "gap": -0.3842899999999929
+  },
+  {
+    "name": "Cuba",
+    "code": "CUB",
+    "region": "Latin America & Caribbean",
+    "female": 95.5269,
+    "male": 95.83498,
+    "gap": -0.3080800000000039
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GBR",
+    "region": "Europe & Central Asia",
+    "female": 99.42539,
+    "male": 99.70747,
+    "gap": -0.28208000000000766
+  },
+  {
+    "name": "Eswatini",
+    "code": "SWZ",
+    "region": "Sub-Saharan Africa",
+    "female": 82.46771,
+    "male": 82.71865,
+    "gap": -0.25093999999999994
+  },
+  {
+    "name": "Moldova",
+    "code": "MDA",
+    "region": "Europe & Central Asia",
+    "female": 89.60835,
+    "male": 89.81307,
+    "gap": -0.20471999999999468
+  },
+  {
+    "name": "Italy",
+    "code": "ITA",
+    "region": "Europe & Central Asia",
+    "female": 97.14222,
+    "male": 97.33788,
+    "gap": -0.19566000000000372
+  },
+  {
+    "name": "Armenia",
+    "code": "ARM",
+    "region": "Europe & Central Asia",
+    "female": 92.26242,
+    "male": 92.3595,
+    "gap": -0.09707999999999117
+  },
+  {
+    "name": "West Bank and Gaza",
+    "code": "PSE",
+    "region": "Middle East & North Africa",
+    "female": 97.14533,
+    "male": 97.23979,
+    "gap": -0.09445999999999799
+  },
+  {
+    "name": "Korea, Rep.",
+    "code": "KOR",
+    "region": "East Asia & Pacific",
+    "female": 97.50096,
+    "male": 97.59164,
+    "gap": -0.09067999999999188
+  },
+  {
+    "name": "United States",
+    "code": "USA",
+    "region": "North America",
+    "female": 95.51193,
+    "male": 95.60171,
+    "gap": -0.08977999999999042
+  },
+  {
+    "name": "Costa Rica",
+    "code": "CRI",
+    "region": "Latin America & Caribbean",
+    "female": 96.52241,
+    "male": 96.57883,
+    "gap": -0.0564200000000028
+  },
+  {
+    "name": "Saudi Arabia",
+    "code": "SAU",
+    "region": "Middle East & North Africa",
+    "female": 95.76108,
+    "male": 95.79828,
+    "gap": -0.03719999999999857
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "code": "STP",
+    "region": "Sub-Saharan Africa",
+    "female": 93.98178,
+    "male": 93.95232,
+    "gap": 0.029460000000000264
+  },
+  {
+    "name": "Chile",
+    "code": "CHL",
+    "region": "Latin America & Caribbean",
+    "female": 94.79262,
+    "male": 94.75975,
+    "gap": 0.03287000000000262
+  },
+  {
+    "name": "North Macedonia",
+    "code": "MKD",
+    "region": "Europe & Central Asia",
+    "female": 95.75968,
+    "male": 95.69937,
+    "gap": 0.060310000000001196
+  },
+  {
+    "name": "Bulgaria",
+    "code": "BGR",
+    "region": "Europe & Central Asia",
+    "female": 88.14373,
+    "male": 88.03166,
+    "gap": 0.11207000000000278
+  },
+  {
+    "name": "Venezuela, RB",
+    "code": "VEN",
+    "region": "Latin America & Caribbean",
+    "female": 89.73891,
+    "male": 89.62393,
+    "gap": 0.11498000000000275
+  },
+  {
+    "name": "Morocco",
+    "code": "MAR",
+    "region": "Middle East & North Africa",
+    "female": 97.02559,
+    "male": 96.87776,
+    "gap": 0.14782999999999902
+  },
+  {
+    "name": "Hungary",
+    "code": "HUN",
+    "region": "Europe & Central Asia",
+    "female": 96.58643,
+    "male": 96.43125,
+    "gap": 0.15517999999998722
+  },
+  {
+    "name": "Serbia",
+    "code": "SRB",
+    "region": "Europe & Central Asia",
+    "female": 98.642,
+    "male": 98.48353,
+    "gap": 0.15846999999999412
+  },
+  {
+    "name": "Romania",
+    "code": "ROU",
+    "region": "Europe & Central Asia",
+    "female": 85.80322,
+    "male": 85.61965,
+    "gap": 0.18357000000000312
+  },
+  {
+    "name": "Poland",
+    "code": "POL",
+    "region": "Europe & Central Asia",
+    "female": 97.27989,
+    "male": 97.04604,
+    "gap": 0.23384999999998968
+  },
+  {
+    "name": "Dominican Republic",
+    "code": "DOM",
+    "region": "Latin America & Caribbean",
+    "female": 94.47021,
+    "male": 94.21366,
+    "gap": 0.25654999999999006
+  },
+  {
+    "name": "Belgium",
+    "code": "BEL",
+    "region": "Europe & Central Asia",
+    "female": 99.24697,
+    "male": 98.9861,
+    "gap": 0.26087000000001126
+  },
+  {
+    "name": "Finland",
+    "code": "FIN",
+    "region": "Europe & Central Asia",
+    "female": 98.82403,
+    "male": 98.56114,
+    "gap": 0.26288999999999874
+  },
+  {
+    "name": "Liberia",
+    "code": "LBR",
+    "region": "Sub-Saharan Africa",
+    "female": 44.71462,
+    "male": 44.43024,
+    "gap": 0.28437999999999874
+  },
+  {
+    "name": "Macao SAR, China",
+    "code": "MAC",
+    "region": "East Asia & Pacific",
+    "female": 96.965,
+    "male": 96.66092,
+    "gap": 0.304079999999999
+  },
+  {
+    "name": "Philippines",
+    "code": "PHL",
+    "region": "East Asia & Pacific",
+    "female": 95.18792,
+    "male": 94.8704,
+    "gap": 0.3175200000000018
+  },
+  {
+    "name": "Guatemala",
+    "code": "GTM",
+    "region": "Latin America & Caribbean",
+    "female": 88.43096,
+    "male": 87.97486,
+    "gap": 0.4560999999999922
+  },
+  {
+    "name": "Greece",
+    "code": "GRC",
+    "region": "Europe & Central Asia",
+    "female": 98.45671,
+    "male": 97.99765,
+    "gap": 0.459060000000008
+  },
+  {
+    "name": "Jamaica",
+    "code": "JAM",
+    "region": "Latin America & Caribbean",
+    "female": 83.16786,
+    "male": 82.58406,
+    "gap": 0.5838000000000108
+  },
+  {
+    "name": "Spain",
+    "code": "ESP",
+    "region": "Europe & Central Asia",
+    "female": 97.70794,
+    "male": 97.00026,
+    "gap": 0.7076799999999963
+  },
+  {
+    "name": "Australia",
+    "code": "AUS",
+    "region": "East Asia & Pacific",
+    "female": 96.87867,
+    "male": 96.13913,
+    "gap": 0.7395400000000052
+  },
+  {
+    "name": "Montenegro",
+    "code": "MNE",
+    "region": "Europe & Central Asia",
+    "female": 96.55796,
+    "male": 95.76566,
+    "gap": 0.7922999999999973
+  },
+  {
+    "name": "Colombia",
+    "code": "COL",
+    "region": "Latin America & Caribbean",
+    "female": 97.75212,
+    "male": 96.95737,
+    "gap": 0.7947500000000076
+  },
+  {
+    "name": "Netherlands",
+    "code": "NLD",
+    "region": "Europe & Central Asia",
+    "female": 99.46792,
+    "male": 98.61263,
+    "gap": 0.8552900000000108
+  },
+  {
+    "name": "Cyprus",
+    "code": "CYP",
+    "region": "Europe & Central Asia",
+    "female": 98.22379,
+    "male": 97.35035,
+    "gap": 0.873439999999988
+  },
+  {
+    "name": "El Salvador",
+    "code": "SLV",
+    "region": "Latin America & Caribbean",
+    "female": 81.4231,
+    "male": 80.52724,
+    "gap": 0.895859999999999
+  },
+  {
+    "name": "Rwanda",
+    "code": "RWA",
+    "region": "Sub-Saharan Africa",
+    "female": 97.39013,
+    "male": 96.47141,
+    "gap": 0.9187199999999933
+  },
+  {
+    "name": "Ghana",
+    "code": "GHA",
+    "region": "Sub-Saharan Africa",
+    "female": 86.32792,
+    "male": 85.17894,
+    "gap": 1.1489800000000088
+  },
+  {
+    "name": "Estonia",
+    "code": "EST",
+    "region": "Europe & Central Asia",
+    "female": 94.55005,
+    "male": 93.35024,
+    "gap": 1.1998099999999994
+  },
+  {
+    "name": "Bhutan",
+    "code": "BTN",
+    "region": "South Asia",
+    "female": 90.30842,
+    "male": 89.10776,
+    "gap": 1.2006599999999992
+  },
+  {
+    "name": "Latvia",
+    "code": "LVA",
+    "region": "Europe & Central Asia",
+    "female": 97.82212,
+    "male": 96.428,
+    "gap": 1.394120000000001
+  },
+  {
+    "name": "St. Lucia",
+    "code": "LCA",
+    "region": "Latin America & Caribbean",
+    "female": 98.48153,
+    "male": 96.93775,
+    "gap": 1.5437800000000124
+  },
+  {
+    "name": "Azerbaijan",
+    "code": "AZE",
+    "region": "Europe & Central Asia",
+    "female": 98.76192,
+    "male": 97.2161,
+    "gap": 1.5458200000000062
+  },
+  {
+    "name": "Honduras",
+    "code": "HND",
+    "region": "Latin America & Caribbean",
+    "female": 81.3762,
+    "male": 79.60111,
+    "gap": 1.7750899999999916
+  },
+  {
+    "name": "Maldives",
+    "code": "MDV",
+    "region": "South Asia",
+    "female": 96.42033,
+    "male": 94.49671,
+    "gap": 1.9236200000000139
+  },
+  {
+    "name": "Slovak Republic",
+    "code": "SVK",
+    "region": "Europe & Central Asia",
+    "female": 84.16967,
+    "male": 82.1849,
+    "gap": 1.9847699999999975
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "code": "ATG",
+    "region": "Latin America & Caribbean",
+    "female": 98.69226,
+    "male": 96.43519,
+    "gap": 2.257069999999999
+  },
+  {
+    "name": "Timor-Leste",
+    "code": "TLS",
+    "region": "East Asia & Pacific",
+    "female": 97.58067,
+    "male": 94.79412,
+    "gap": 2.786549999999991
+  },
+  {
+    "name": "Kuwait",
+    "code": "KWT",
+    "region": "Middle East & North Africa",
+    "female": 93.32123,
+    "male": 90.17609,
+    "gap": 3.145139999999998
+  },
+  {
+    "name": "Burundi",
+    "code": "BDI",
+    "region": "Sub-Saharan Africa",
+    "female": 97.16765,
+    "male": 93.94217,
+    "gap": 3.2254799999999904
+  },
+  {
+    "name": "Suriname",
+    "code": "SUR",
+    "region": "Latin America & Caribbean",
+    "female": 87.98488,
+    "male": 84.29531,
+    "gap": 3.6895700000000033
+  },
+  {
+    "name": "Tanzania",
+    "code": "TZA",
+    "region": "Sub-Saharan Africa",
+    "female": 86.43188,
+    "male": 82.73426,
+    "gap": 3.6976200000000006
+  },
+  {
+    "name": "Djibouti",
+    "code": "DJI",
+    "region": "Middle East & North Africa",
+    "female": 62.02095,
+    "male": 58.28336,
+    "gap": 3.7375899999999973
+  },
+  {
+    "name": "Zambia",
+    "code": "ZMB",
+    "region": "Sub-Saharan Africa",
+    "female": 87.03175,
+    "male": 83.202,
+    "gap": 3.829750000000004
+  },
+  {
+    "name": "Mauritania",
+    "code": "MRT",
+    "region": "Sub-Saharan Africa",
+    "female": 80.42269,
+    "male": 76.27539,
+    "gap": 4.147300000000001
+  },
+  {
+    "name": "South Africa",
+    "code": "ZAF",
+    "region": "Sub-Saharan Africa",
+    "female": 94.66547,
+    "male": 90.27715,
+    "gap": 4.388319999999993
+  },
+  {
+    "name": "Gambia, The",
+    "code": "GMB",
+    "region": "Sub-Saharan Africa",
+    "female": 83.99385,
+    "male": 76.38094,
+    "gap": 7.612909999999999
+  },
+  {
+    "name": "Senegal",
+    "code": "SEN",
+    "region": "Sub-Saharan Africa",
+    "female": 80.75965,
+    "male": 72.26251,
+    "gap": 8.497139999999987
+  }
+]
