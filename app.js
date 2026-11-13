@@ -13,11 +13,13 @@ function node(tag, attrs, text) {
 }
 function draw(selector, rows, dark=false) {
  const svg = $(selector);
+ if(svg.parentElement) svg.parentElement.scrollTop=0;
  svg.replaceChildren();
  $('#tooltip').hidden=true;
- const width=1000,left=180,right=105,top=65,rowHeight=30,height=top+rows.length*rowHeight+20;
+ const compact=window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+ const width=compact?360:1000,left=compact?20:180,right=compact?20:105,top=compact?78:65,rowHeight=compact?58:30,height=top+rows.length*rowHeight+20;
  const x = value => left+value/100*(width-left-right);
- const ink=dark?'#e7efdf':'#18352f',muted=dark?'#b3c5be':'#53685f',grid=dark?'#345052':'#e1e8e1';
+ const ink='#202633',muted='#5b6473',grid='#e0e5ed';
  svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
  const titleId=svg.id+'-title',descId=svg.id+'-desc';
  svg.removeAttribute('aria-label');
@@ -25,7 +27,7 @@ function draw(selector, rows, dark=false) {
  svg.append(node('title',{id:titleId},`${rows.length} economies: female and male adjusted net primary enrollment, 2017`));
  svg.append(node('desc',{id:descId},'Paired dots on a fixed zero to one hundred percent scale. Each row gives female enrollment, male enrollment, and the female minus male gap in percentage points.'));
  svg.append(node('text',{x:left,y:16,fill:muted,'font-size':12},'Adjusted net enrollment (%)'));
- svg.append(node('text',{x:width-8,y:16,fill:muted,'font-size':12,'text-anchor':'end'},'Female − male (pp)'));
+ if(!compact)svg.append(node('text',{x:width-8,y:16,fill:muted,'font-size':12,'text-anchor':'end'},'Female − male (pp)')); 
  for(let tick=0;tick<=100;tick+=20){
   svg.append(node('line',{x1:x(tick),x2:x(tick),y1:40,y2:height-15,stroke:grid}));
   svg.append(node('text',{x:x(tick),y:35,fill:muted,'font-size':12,'text-anchor':'middle'},tick));
@@ -33,12 +35,12 @@ function draw(selector, rows, dark=false) {
  rows.forEach((r,i)=>{
   const y=top+i*rowHeight;
   const g=node('g',{'tabindex':0,'role':'img','aria-label':`${r.name}: female ${fmt(r.female)} percent, male ${fmt(r.male)} percent, gap ${signed(r.gap)} percentage points`});
-  g.append(node('rect',{x:0,y:y-13,width,height:28,fill:i%2===0?(dark?'#1c3638':'#f6f8f4'):'transparent',opacity:.65}));
-  g.append(node('text',{x:left-13,y:y+4,fill:ink,'font-size':12,'text-anchor':'end'},r.name));
-  g.append(node('line',{x1:x(r.female),x2:x(r.male),y1:y,y2:y,stroke:dark?'#a4b9ab':'#9eaaa2','stroke-width':3}));
-  g.append(node('circle',{cx:x(r.male),cy:y,r:5,fill:dark?'#f1b580':'#b24c22',stroke:dark?'#152e30':'white','stroke-width':1}));
-  g.append(node('circle',{cx:x(r.female),cy:y,r:4,fill:dark?'#7bd2ca':'#007d83',stroke:dark?'#152e30':'white','stroke-width':1}));
-  g.append(node('text',{x:width-8,y:y+4,fill:ink,'font-size':12,'text-anchor':'end'},signed(r.gap)));
+  g.append(node('rect',{x:0,y:y-(compact?34:13),width,height:compact?56:28,fill:i%2===0?'#f4f6fa':'transparent',opacity:.65}));
+  g.append(node('text',{x:compact?left:left-13,y:compact?y-17:y+4,fill:ink,'font-size':compact?13:12,'text-anchor':compact?'start':'end'},r.name));
+  g.append(node('line',{x1:x(r.female),x2:x(r.male),y1:y,y2:y,stroke:'#9caabe','stroke-width':3}));
+  g.append(node('circle',{cx:x(r.male),cy:y,r:5,fill:'#b85a16',stroke:'white','stroke-width':1}));
+  g.append(node('circle',{cx:x(r.female),cy:y,r:4,fill:'#285bc5',stroke:'white','stroke-width':1}));
+  g.append(node('text',{x:compact?width-right:width-8,y:compact?y-17:y+4,fill:ink,'font-size':12,'text-anchor':'end'},signed(r.gap)+(compact?' pp':'')));
   g.append(node('title',{},`${r.name} · Female ${fmt(r.female)}% · Male ${fmt(r.male)}% · Gap ${signed(r.gap)} pp`));
   const show = e => {const t=$('#tooltip');t.textContent=`${r.name} · Female: ${fmt(r.female)}% · Male: ${fmt(r.male)}% · Gap: ${signed(r.gap)} pp`;t.hidden=false;const rect=g.getBoundingClientRect();t.style.left=`${Math.min(e.clientX||rect.left+200,window.innerWidth-290)}px`;t.style.top=`${Math.min((e.clientY||rect.top)+18,window.innerHeight-95)}px`;};
   g.addEventListener('pointermove',show);g.addEventListener('focus',show);
@@ -78,3 +80,7 @@ $('#region').addEventListener('change',renderWhite);$('#sort').addEventListener(
 $('#reset').addEventListener('click',()=>{$('#region').value='all';$('#sort').value='gap';$('#search').value='';renderWhite()});
 $('#audit').addEventListener('click',()=>{audited=!audited;renderBlack()});
 renderWhite();renderBlack();
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#tooltip').hidden=true;});
+
+if(window.matchMedia){const responsiveChart=window.matchMedia('(max-width: 600px)');responsiveChart.addEventListener('change',()=>{renderWhite();renderBlack();});}
