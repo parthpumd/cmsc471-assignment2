@@ -14,11 +14,16 @@ function node(tag, attrs, text) {
 function draw(selector, rows, dark=false) {
  const svg = $(selector);
  svg.replaceChildren();
+ $('#tooltip').hidden=true;
  const width=1000,left=180,right=105,top=65,rowHeight=30,height=top+rows.length*rowHeight+20;
  const x = value => left+value/100*(width-left-right);
  const ink=dark?'#e7efdf':'#18352f',muted=dark?'#b3c5be':'#53685f',grid=dark?'#345052':'#e1e8e1';
  svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
- svg.append(node('title',{},`${rows.length} economies: female and male adjusted net primary enrollment, 2017`));
+ const titleId=svg.id+'-title',descId=svg.id+'-desc';
+ svg.removeAttribute('aria-label');
+ svg.setAttribute('aria-labelledby',`${titleId} ${descId}`);
+ svg.append(node('title',{id:titleId},`${rows.length} economies: female and male adjusted net primary enrollment, 2017`));
+ svg.append(node('desc',{id:descId},'Paired dots on a fixed zero to one hundred percent scale. Each row gives female enrollment, male enrollment, and the female minus male gap in percentage points.'));
  svg.append(node('text',{x:left,y:16,fill:muted,'font-size':12},'Adjusted net enrollment (%)'));
  svg.append(node('text',{x:width-8,y:16,fill:muted,'font-size':12,'text-anchor':'end'},'Female − male (pp)'));
  for(let tick=0;tick<=100;tick+=20){
@@ -48,11 +53,13 @@ function renderWhite(){
  rows.sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):sort==='female'?b.female-a.female:a.gap-b.gap);
  const biggest=rows.length?rows.reduce((a,b)=>Math.abs(a.gap)>Math.abs(b.gap)?a:b):null;
  $('#metrics').innerHTML=`<div class="metric"><strong>${rows.length}</strong><span>economies in the current view</span></div><div class="metric"><strong>${rows.length?signed(mean(rows)):'—'} <small>pp</small></strong><span>unweighted mean female–male gap</span></div><div class="metric"><strong>${biggest?fmt(Math.abs(biggest.gap)):'—'} <small>pp</small></strong><span>largest absolute gap${biggest?' · '+biggest.name:''}</span></div>`;
- $('#count').textContent=`Showing ${rows.length} of ${enrollmentData.length} eligible economies · 2017 only · Scroll inside the chart to inspect every row. Hover or focus a row for exact rates.`;
+ $('#white-badge').textContent=rows.length===enrollmentData.length?'All 80 economies':`${rows.length} of 80 economies`;
+ $('#count').textContent=`Showing ${rows.length} of ${enrollmentData.length} eligible economies · 2017 only · Scroll inside the chart to inspect every row. Hover or use Tab to focus a row for exact rates. On a narrow screen, scroll sideways too.`;
  draw('#white-chart',rows);
  $('#table').replaceChildren(...rows.map(r=>{const tr=document.createElement('tr');[r.name,r.region,fmt(r.female),fmt(r.male),signed(r.gap)].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});return tr}));
 }
 function renderBlack(){
+ $('#black-badge').textContent=audited?'All 80 economies':'8 selected economies';
  const rows=audited?[...enrollmentData].sort((a,b)=>a.gap-b.gap):chosen;
  $('#black-heading').textContent=audited?'The gaps are clearer with all 80 economies.':'Primary education has reached gender equality.';
  $('#black-deck').textContent=audited?'This view includes every complete pair in our sample. Some economies have lower female enrollment, while others have lower male enrollment.':'Girls match or outperform boys across leading education markets. The access gap is behind us.';
